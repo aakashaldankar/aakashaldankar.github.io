@@ -6,7 +6,7 @@
     'use strict';
 
     // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    const currentTheme = localStorage.getItem('theme') || 'dark';
 
     // Apply theme on page load
     document.documentElement.setAttribute('data-theme', currentTheme);
