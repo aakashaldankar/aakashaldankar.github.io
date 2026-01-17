@@ -5,7 +5,7 @@
 (function() {
     'use strict';
 
-    // Check for saved theme preference or default to light mode
+    // Check for saved theme preference or default to dark mode
     const currentTheme = localStorage.getItem('theme') || 'dark';
 
     // Apply theme on page load

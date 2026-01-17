@@ -142,6 +142,7 @@
         gap: var(--spacing-md);
         transform: translateY(-100%);
         opacity: 0;
+        pointer-events: none;
         transition: all var(--transition-base);
         border-bottom: 1px solid var(--border-color);
     }
@@ -149,6 +150,7 @@
     .nav-links.active {
         transform: translateY(0);
         opacity: 1;
+        pointer-events: auto;
     }
 
     .mobile-menu-toggle {
