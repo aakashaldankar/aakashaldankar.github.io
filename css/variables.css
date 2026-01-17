@@ -1,0 +1,88 @@
+/* ==========================================
+   CSS VARIABLES - Color Schemes & Themes
+   ========================================== */
+
+:root {
+    /* Light Mode Colors */
+    --bg-primary: #FAFAFA;
+    --bg-secondary: #FFFFFF;
+    --bg-tertiary: #F5F5F5;
+
+    --text-primary: #1A1A1A;
+    --text-secondary: #666666;
+    --text-tertiary: #999999;
+
+    --accent-primary: #2563EB;
+    --accent-hover: #1D4ED8;
+    --accent-light: #DBEAFE;
+
+    --border-color: #E5E5E5;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    --font-mono: 'Courier New', monospace;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-2xl: 4rem;
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 400ms ease;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+
+    /* Layout */
+    --container-width: 1200px;
+    --content-width: 720px;
+    --header-height: 70px;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --bg-primary: #0A0A0A;
+    --bg-secondary: #1A1A1A;
+    --bg-tertiary: #2A2A2A;
+
+    --text-primary: #E8E8E8;
+    --text-secondary: #A0A0A0;
+    --text-tertiary: #707070;
+
+    --accent-primary: #60A5FA;
+    --accent-hover: #93C5FD;
+    --accent-light: #1E3A5F;
+
+    --border-color: #2A2A2A;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.5);
+    --shadow-hover: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Smooth theme transition */
+* {
+    transition: background-color var(--transition-base),
+                color var(--transition-base),
+                border-color var(--transition-base);
+}
+
+/* Gradient for accent text */
+.gradient-text {
+    background: linear-gradient(135deg, var(--accent-primary), #8B5CF6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
