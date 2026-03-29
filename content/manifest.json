@@ -5,6 +5,7 @@
     "before-the-mattress-arrives"
   ],
   "projects": [
-    "kaleidoscope-chat-ai-tutor"
+    "kaleidoscope-chat-ai-tutor",
+    "llama-medical-finetune"
   ]
 }
