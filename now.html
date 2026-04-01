@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projects and work">
-    <title>Projects - Aakash Haldankar</title>
+    <meta name="description" content="What I'm working on now">
+    <title>Now - Aakash Haldankar</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/variables.css">
@@ -25,11 +25,11 @@
             <a href="index.html" class="logo">aakashaldankar</a>
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="now.html" class="nav-link">Now</a></li>
+                <li><a href="now.html" class="nav-link active">Now</a></li>
                 <li><a href="blogs.html" class="nav-link">Blogs</a></li>
-                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="mailto:your.email@example.com" class="nav-link">Contact</a></li>
+                <li><a href="mailto:aakashaldankar@gmail.com" class="nav-link">Contact</a></li>
                 <li>
                     <button class="theme-toggle" aria-label="Toggle theme">
                         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -57,33 +57,50 @@
         </nav>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">Projects</h1>
-            <p class="page-description">Things I've built and worked on</p>
+    <!-- Now Section -->
+    <section class="now-section">
+        <div class="now-header">
+            <h1 class="now-title">Now</h1>
+            <p class="now-updated">Last updated: April 2026 — Mumbai, India</p>
+        </div>
+
+        <div class="now-block">
+            <h2>Building</h2>
+            <p>What I'm currently working on and shipping.</p>
+            <ul>
+                <li>Add what you're building here.</li>
+            </ul>
+        </div>
+
+        <div class="now-block">
+            <h2>Learning</h2>
+            <p>Skills and topics I'm actively studying.</p>
+            <ul>
+                <li>Add what you're learning here.</li>
+            </ul>
+        </div>
+
+        <div class="now-block">
+            <h2>Reading</h2>
+            <p>Books currently on my nightstand.</p>
+            <ul>
+                <li>Add what you're reading here.</li>
+            </ul>
+        </div>
+
+        <div class="now-block">
+            <h2>Thinking About</h2>
+            <p>Ideas and questions bouncing around in my head.</p>
+            <ul>
+                <li>Add what you're thinking about here.</li>
+            </ul>
         </div>
     </section>
-
-    <!-- Content Grid -->
-    <main class="main-content">
-        <div class="container">
-            <div class="masonry-grid" id="content-grid">
-                <!-- Content will be dynamically loaded here -->
-            </div>
-            <div class="loading-spinner" id="loading">
-                <div class="spinner"></div>
-            </div>
-            <div class="load-more-container">
-                <button class="btn btn-secondary" id="load-more" style="display: none;">Load More</button>
-            </div>
-        </div>
-    </main>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 All rights reserved.</p>
+            <p>&copy; 2026 All rights reserved.</p>
             <div class="footer-links">
                 <a href="about.html">About</a>
                 <a href="mailto:aakashaldankar@gmail.com">Contact</a>
@@ -93,14 +110,7 @@
 
     <!-- Scripts -->
     <script src="js/theme-toggle.js"></script>
-    <script src="js/router.js"></script>
-    <script src="js/content-loader.js"></script>
-    <script src="js/masonry.js"></script>
     <script src="js/animations.js"></script>
-    <script>
-        // Load only projects
-        window.FILTER_TYPE = 'project';
-    </script>
-    <script src="js/main.js"></script>
 </body>
 </html>
+// python3 -m http.server 8080
