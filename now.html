@@ -17,6 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Markdown parser and sanitizer -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -61,39 +65,11 @@
     <section class="now-section">
         <div class="now-header">
             <h1 class="now-title">Now</h1>
-            <p class="now-updated">Last updated: April 2026 — Mumbai, India</p>
+            <p class="now-updated" id="now-updated">Loading...</p>
         </div>
 
-        <div class="now-block">
-            <h2>Building</h2>
-            <p>What I'm currently working on and shipping.</p>
-            <ul>
-                <li>Add what you're building here.</li>
-            </ul>
-        </div>
-
-        <div class="now-block">
-            <h2>Learning</h2>
-            <p>Skills and topics I'm actively studying.</p>
-            <ul>
-                <li>Add what you're learning here.</li>
-            </ul>
-        </div>
-
-        <div class="now-block">
-            <h2>Reading</h2>
-            <p>Books currently on my nightstand.</p>
-            <ul>
-                <li>Add what you're reading here.</li>
-            </ul>
-        </div>
-
-        <div class="now-block">
-            <h2>Thinking About</h2>
-            <p>Ideas and questions bouncing around in my head.</p>
-            <ul>
-                <li>Add what you're thinking about here.</li>
-            </ul>
+        <div id="now-content">
+            <!-- Content loaded from content/now.md -->
         </div>
     </section>
 
@@ -111,6 +87,30 @@
     <!-- Scripts -->
     <script src="js/theme-toggle.js"></script>
     <script src="js/animations.js"></script>
+    <script>
+        fetch('content/now.md')
+            .then(r => r.text())
+            .then(text => {
+                marked.setOptions({ gfm: true, breaks: false });
+                const rawHtml = marked.parse(text);
+                document.getElementById('now-content').innerHTML = DOMPurify.sanitize(rawHtml, {
+                    ADD_TAGS: ['iframe'],
+                    ADD_ATTR: ['allowfullscreen', 'frameborder', 'allow', 'src', 'title', 'loading']
+                });
+            })
+            .catch(() => {
+                document.getElementById('now-content').innerHTML = '<p>Could not load content.</p>';
+            });
+
+        fetch('content/now.json')
+            .then(r => r.json())
+            .then(data => {
+                if (data.updated) {
+                    document.getElementById('now-updated').textContent = 'Last updated: ' + data.updated;
+                }
+            })
+            .catch(() => {});
+    </script>
 </body>
 </html>
 // python3 -m http.server 8080

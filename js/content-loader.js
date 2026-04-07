@@ -165,10 +165,18 @@ const ContentLoader = (function() {
                 titleElement.textContent = article.title;
             }
 
-            // Render content (supports markdown-like formatting)
+            // Fetch and render markdown body
             const contentElement = document.getElementById('article-content');
-            if (contentElement) {
-                contentElement.innerHTML = formatContent(article.content);
+            if (contentElement && article.contentFile) {
+                try {
+                    const mdResponse = await fetch(article.contentFile);
+                    if (!mdResponse.ok) throw new Error('Markdown file not found');
+                    const mdText = await mdResponse.text();
+                    contentElement.innerHTML = renderMarkdown(mdText);
+                } catch (e) {
+                    console.error('Error loading markdown content:', e);
+                    contentElement.innerHTML = '<p>Content could not be loaded.</p>';
+                }
             }
 
             // Render project links if available
@@ -207,17 +215,19 @@ const ContentLoader = (function() {
         }
     }
 
-    // Format content (basic markdown-like formatting)
-    function formatContent(content) {
-        // Convert **bold** to <strong>
-        content = content.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
-        // Convert *italic* to <em>
-        content = content.replace(/\*(.*?)\*/g, '<em>$1</em>');
-
-        // Convert line breaks to paragraphs
-        const paragraphs = content.split('\n\n');
-        return paragraphs.map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+    // Render markdown content to sanitized HTML
+    function renderMarkdown(text) {
+        if (typeof marked === 'undefined') {
+            // Fallback for pages that don't load the markdown library
+            const paragraphs = text.split('\n\n');
+            return paragraphs.map(p => `<p>${p.replace(/\n/g, '<br>')}</p>`).join('');
+        }
+        marked.setOptions({ gfm: true, breaks: false });
+        const rawHtml = marked.parse(text);
+        return DOMPurify.sanitize(rawHtml, {
+            ADD_TAGS: ['iframe'],
+            ADD_ATTR: ['allowfullscreen', 'frameborder', 'allow', 'src', 'title', 'loading']
+        });
     }
 
     // Load related content
