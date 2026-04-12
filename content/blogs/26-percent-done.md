@@ -272,9 +272,7 @@ I started grooming myself. Something I hadn't bothered with in years.
 
 There was an exhibition on campus.
 
-I saw her there. Somehow knew she was into liberal arts.
-
-Perfect opportunity.
+I saw her there. Perfect opportunity.
 
 I went to the Mac lab where I usually worked on projects. But that day I spent three hours straight brainstorming with ChatGPT about what to say to her.
 
