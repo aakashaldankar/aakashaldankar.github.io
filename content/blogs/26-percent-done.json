@@ -1,0 +1,12 @@
+{
+  "id": "26-percent-done",
+  "title": "26% Done",
+  "date": "2026-04-12",
+  "category": "Personal",
+  "tags": ["life", "personal", "reflection", "growing-up", "milestone", "birthday"],
+  "excerpt": "Eight years old, I wanted to drive a train. Sixteen, it was physics and the thrill of a solved problem. Now I'm 26, living alone in a city that isn't home. Twenty-six things I've picked up along the way.",
+  "image": "images/26-percent-done.jpg",
+  "readTime": "45 min",
+  "contentFile": "content/blogs/26-percent-done.md",
+  "related": ["before-the-mattress-arrives"]
+}
