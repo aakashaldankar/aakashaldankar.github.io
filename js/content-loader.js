@@ -135,7 +135,7 @@ const ContentLoader = (function() {
             }
 
             // Update page title
-            document.title = `${article.title} - Your Name`;
+            document.title = `${article.title} - Aakash Haldankar`;
 
             // Update meta description
             const metaDesc = document.querySelector('meta[name="description"]');
