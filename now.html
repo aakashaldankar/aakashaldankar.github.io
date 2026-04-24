@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Markdown parser and sanitizer -->
+    <!-- Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
 </head>
@@ -65,12 +65,10 @@
     <section class="now-section">
         <div class="now-header">
             <h1 class="now-title">Now</h1>
-            <p class="now-updated" id="now-updated">Loading...</p>
+            <p class="now-updated" id="now-updated">Last updated: …</p>
         </div>
 
-        <div id="now-content">
-            <!-- Content loaded from content/now.md -->
-        </div>
+        <div id="now-content"></div>
     </section>
 
     <!-- Footer -->
@@ -88,29 +86,24 @@
     <script src="js/theme-toggle.js"></script>
     <script src="js/animations.js"></script>
     <script>
-        fetch('content/now.md')
-            .then(r => r.text())
-            .then(text => {
-                marked.setOptions({ gfm: true, breaks: false });
-                const rawHtml = marked.parse(text);
-                document.getElementById('now-content').innerHTML = DOMPurify.sanitize(rawHtml, {
-                    ADD_TAGS: ['iframe'],
-                    ADD_ATTR: ['allowfullscreen', 'frameborder', 'allow', 'src', 'title', 'loading']
-                });
-            })
-            .catch(() => {
-                document.getElementById('now-content').innerHTML = '<p>Could not load content.</p>';
-            });
+        (async () => {
+            try {
+                const [metaRes, mdRes] = await Promise.all([
+                    fetch('content/now.json'),
+                    fetch('content/now.md')
+                ]);
+                const meta = await metaRes.json();
+                const mdText = await mdRes.text();
 
-        fetch('content/now.json')
-            .then(r => r.json())
-            .then(data => {
-                if (data.updated) {
-                    document.getElementById('now-updated').textContent = 'Last updated: ' + data.updated;
-                }
-            })
-            .catch(() => {});
+                document.getElementById('now-updated').textContent = 'Last updated: ' + meta.updated;
+
+                marked.setOptions({ gfm: true, breaks: false });
+                const html = DOMPurify.sanitize(marked.parse(mdText));
+                document.getElementById('now-content').innerHTML = html;
+            } catch (e) {
+                console.error('Failed to load now content:', e);
+            }
+        })();
     </script>
 </body>
 </html>
-// python3 -m http.server 8080

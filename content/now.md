@@ -1,45 +1,86 @@
+## Now
 
-## Building
+Last updated: 24th April 2026, Bangalore, India.
 
-Two projects running in parallel right now.
+## Building 
 
-The first is an LLM finetune. I've done this before, 100 questions, a T4 on Colab, results that were more experiment than anything else. This time I'm doing it properly. Kaggle's compute, a real dataset, enough data that the model might actually learn something and not just memorize. If the results look good, I'll move to paid compute and push further.
+One project.
 
-The second is a price prediction project. This one's bigger. Not just the model, the whole stack. MLFlow for tracking experiments. DVC for data versioning. Docker for containerization. Kubernetes. AWS for deployment. The MLOps side of things, end to end.
+That's the rule now.
 
-Thirty to thirty-five days is the target. Let's see.
+Earlier I had two running at the same time an ML pipeline and an LLM fine-tuning project. Bouncing between them. Context switching every time. Feeling busy without feeling like anything was actually moving.
 
----
+Then made the call. Focus on one. The ML project first. The LLM project waits.
+
+Good decision.
+
+Because the scope of the ML project keeps growing. MLOps components are getting added. 
+
+The pipeline is taking shape but it's still very much a construction site. 
+
+I think it needs another 40 days if I stay consistent. Consistent is the operative word.
+
+So the plan: arrive at the office by 7:45 every morning, sit down at 8, and work on it until 10. Two hours. Uninterrupted. Before the rest of the day floods in.
+
+It's working.
+
 
 ## Learning
 
-MLFlow and DVC are new to me. I'm picking them up alongside the project, which is the only way I actually retain anything. Kubernetes too. A bit intimidating at first. Less so now.
+MLflow and DVC make sense to me now.
 
-Also looking at Grafana and Prometheus. Logging and visualization. The boring-sounding parts that turn out to matter a lot.
+That didn't happen by accident. There were days where it felt like I was reading the same docs in circles. But then something clicks and all of a sudden the pieces start talking to each other.
 
-And here's a different one: I bought an induction cooktop.
+The ML pipeline is still in progress. Still a lot to figure out on the MLOps side. But the fog is lifting a little.
 
-Starting simple. Noodles. Tea. Eggs a few different ways. The goal isn't to become a chef. The goal is to not eat out every single meal. Small wins count.
+In the evenings I rotate. Alternate days AWS fundamentals one evening, LeetCode the next. Cloud and DevOps are new territory for me. I don't want them to stay that way.
 
----
+Here's the thing I keep coming back to: if I want to be good at software engineering, not just ML engineering, I need to understand the infrastructure underneath. The code that runs the code. AWS feels like the beginning of that.
+
+And cooking.
+
+The new induction cooktop has become its own kind of experiment. Mostly one-pot recipes. Quick, easy, surprisingly satisfying. Turns out not everything needs to be complicated to be worth doing.
+
 
 ## Reading
 
-I stopped reading *11 Minutes* by Paulo Coelho a few weeks back, somewhere in the middle.
+Skipping 11 Minutes by Paulo Coelho. Again.
 
-I should go back.
+Instead: Derek Sivers. Anything You Want 40 Lessons for a New Kind of Entrepreneur.
 
-It starts with a sentence I didn't expect. *Once upon a time, there was a prostitute called Maria.* I stayed for that first line alone. Paulo Coelho knows how to open a door. And this is my first reading of Paulo Coelho though.
+I've read a few things by Derek before. But this one lands differently. 40 short lessons. Real decisions, real mistakes, real life. No fluff, no padding. 
 
----
+You can tell he's not performing wisdom, he's just writing down what actually happened.
+
+Exciting and easy to read. That's a rare combination.
+
 
 ## Thinking About
 
-The big blog. It's sitting at around 11,000 words now. Started as a few paragraphs, turned into something much larger than I planned.
+I finished a big blog two weeks ago.
 
-I'm working on cutting it down. Tightening it. Saying the same things with fewer words.
+It took a while. Weeks of writing in spare moments. Some of it was uncomfortable to put down. The kind of writing that makes you pause and stare out the window for a bit.
 
-Harder than it sounds. It may take a week more, but trying to finish it soon.
+The one I called "Beauty and the Beast" is the longest. And the most personal and close to me. About my chaotic mid-twenties. About the kind of life I actually want to live versus the kind I was drifting through. About what I found in the mess of it.
 
----
+I poured something real into it. It's a gift for my future self.
 
+And now I find myself thinking about it a lot. What it said. What I meant by it.
+
+I started as a Data Analyst in 2021. Now it's 2026 and I'm working as an AI/ML engineer.
+
+3 years of total job experience with a study gap.
+
+It's going well. I want to keep it that way.
+
+Just keep going.
+
+But I also know I need more than just work. Something that makes time disappear. That old feeling where you look up and three hours have passed and you didn't notice.
+
+Video games. Anime. Those thrilling Webtoon series I keep seeing. Startup events in Bangalore, the city has a lot of them. Finding people building things.
+
+There's a line I keep coming back to, from The Shawshank Redemption:
+
+Get busy living, or get busy dying.
+
+I want to live by that.
