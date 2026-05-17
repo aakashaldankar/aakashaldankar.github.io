@@ -226,7 +226,7 @@ const ContentLoader = (function() {
         const rawHtml = marked.parse(text);
         return DOMPurify.sanitize(rawHtml, {
             ADD_TAGS: ['iframe'],
-            ADD_ATTR: ['allowfullscreen', 'frameborder', 'allow', 'src', 'title', 'loading']
+            ADD_ATTR: ['allowfullscreen', 'frameborder', 'allow', 'src', 'title', 'loading', 'referrerpolicy']
         });
     }
 
