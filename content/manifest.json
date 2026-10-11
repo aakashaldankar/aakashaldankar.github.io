@@ -2,7 +2,7 @@
   "blogs": [
   ],
   "projects": [
-    "kaleidoscope-chat-ai-tutor",
+     "_disables_kaleidoscope-chat-ai-tutor",
     "llama-medical-finetune"
   ]
 }
