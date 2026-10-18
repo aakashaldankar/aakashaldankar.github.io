@@ -1,8 +1,15 @@
 {
   "blogs": [
+    "youve-got-this",
+    "winners-never-quit",
+    "26-percent-done",
+    "before-the-mattress-arrives",
+    "remote-is-for-later",
+    "home-then-hired"
   ],
   "projects": [
-     "_disables_kaleidoscope-chat-ai-tutor",
-    "llama-medical-finetune"
+     "kaleidoscope-chat-ai-tutor",
+    "llama-medical-finetune",
+    "albany-airbnb-price-predictor"
   ]
 }

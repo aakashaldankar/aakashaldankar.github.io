@@ -1,0 +1,16 @@
+{
+  "id": "kaleidoscope-chat-ai-tutor",
+  "title": "KaleidoscopeChat - AI Literature Tutor",
+  "date": "2025-10-25",
+  "category": "AI/ML",
+  "tags": ["AI", "RAG", "NLP", "LlamaIndex", "LangChain", "Gradio", "Qdrant", "Education"],
+  "excerpt": "An intelligent AI tutor that makes English literature engaging and accessible. Built with RAG architecture, it helps students explore the Kaleidoscope textbook through conversational learning.",
+  "image": "images/kaleidoscopechat_ai_literature_tutor.png",
+  "readTime": "8 min",
+  "contentFile": "content/projects/kaleidoscope-chat-ai-tutor.md",
+  "links": {
+    "Live Demo": "https://huggingface.co/spaces/aakashaldankar/KaleidoscopeChat",
+    "GitHub Repository": "https://github.com/aakashaldankar/KaleidoscopeChat"
+  },
+  "related": ["home-then-hired"]
+}
