@@ -1,0 +1,12 @@
+{
+  "id": "lukewarm-water",
+  "title": "Lukewarm Water",
+  "date": "2026-08-27",
+  "category": "Personal",
+  "tags": ["patience", "anxiety", "pets", "reflection", "motivation", "life"],
+  "excerpt": "My tortoise sat in a tub of lukewarm water for days before anything changed. Turns out the same slow, invisible work that got her moving again is the only cure for a 2am mind that won't stop playing disaster films.",
+  "image": "images/lukewarm-water.jpg",
+  "readTime": "4 min",
+  "contentFile": "content/blogs/lukewarm-water.md",
+  "related": ["run-your-own-lane"]
+}

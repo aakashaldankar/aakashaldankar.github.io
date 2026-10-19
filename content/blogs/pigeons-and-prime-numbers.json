@@ -1,0 +1,12 @@
+{
+  "id": "pigeons-and-prime-numbers",
+  "title": "Pigeons And Prime Numbers",
+  "date": "2026-08-01",
+  "category": "Personal",
+  "tags": ["obsession", "creativity", "genius", "motivation", "reflection", "tesla", "ramanujan"],
+  "excerpt": "Nikola Tesla whistled for one pigeon every evening until the night she died. Srinivasa Ramanujan filled notebooks with identities nobody asked for, by candlelight, for years. Neither one was performing for us, and that's exactly why it worked.",
+  "image": "images/pigeons-and-prime-numbers.png",
+  "readTime": "5 min",
+  "contentFile": "content/blogs/pigeons-and-prime-numbers.md",
+  "related": ["youve-got-this"]
+}
