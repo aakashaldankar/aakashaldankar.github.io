@@ -1,5 +1,3 @@
-# I Spent Six Months Building an Airbnb Price Predictor. The Model Took Two Weeks.
-
 ### Everything else (the registry, the retraining, the CI/CD, the monitoring) turned out to be the actual project.
 
 I started this on December 30th, sitting in my room with a half-finished nutrition degree's worth of free time and a CSV of Albany, NY Airbnb listings I'd pulled together myself. The first commit just handled null values. That's it. No model, no pipeline, nothing you'd show anyone.

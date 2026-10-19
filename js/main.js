@@ -71,7 +71,7 @@
 
                 // Show load more button if there's more content
                 if (loadMoreBtn) {
-                    const hasMore = initialContent.length < ContentLoader.loadAllContent.length;
+                    const hasMore = initialContent.length < ContentLoader.getTotalCount();
                     loadMoreBtn.style.display = hasMore ? 'block' : 'none';
                 }
 

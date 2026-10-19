@@ -278,10 +278,16 @@ const ContentLoader = (function() {
         }
     }
 
+    // Get total number of loaded items
+    function getTotalCount() {
+        return allContent.length;
+    }
+
     return {
         loadAllContent,
         renderContent,
         getInitialContent,
+        getTotalCount,
         loadMore,
         loadArticle
     };
