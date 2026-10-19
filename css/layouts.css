@@ -97,20 +97,27 @@
 }
 
 /* Masonry Grid */
+/* Grid (not CSS columns) so cards flow left-to-right in date order */
 .masonry-grid {
-    column-count: 1;
-    column-gap: var(--spacing-lg);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+.masonry-grid .card {
+    margin-bottom: 0;
 }
 
 @media (min-width: 768px) {
     .masonry-grid {
-        column-count: 2;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (min-width: 1024px) {
     .masonry-grid {
-        column-count: 3;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
