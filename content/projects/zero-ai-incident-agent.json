@@ -1,0 +1,13 @@
+{
+  "id": "zero-ai-incident-agent",
+  "title": "Zero: The AI Agent Built to Debug 3 A.M. Pages",
+  "date": "2026-10-21",
+  "category": "DevOps & SRE",
+  "label": "AI Agents",
+  "tags": ["AI Agents", "LLM", "SRE", "Incident Response", "AWS", "Observability", "RAG", "TypeScript"],
+  "excerpt": "An AI operations agent that does the 3 A.M. stitching work of an incident: it normalizes alerts, pulls past incidents from memory, delegates to sandboxed subagents, and traces 5xx errors to a root cause, all inside deterministic guardrails that never trust the model to behave.",
+  "image": "images/zero-ai-incident-agent.png",
+  "readTime": "38 min",
+  "contentFile": "content/projects/zero-ai-incident-agent.md",
+  "related": ["albany-airbnb-price-predictor"]
+}

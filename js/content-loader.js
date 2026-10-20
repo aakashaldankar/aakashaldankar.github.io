@@ -65,7 +65,7 @@ const ContentLoader = (function() {
             ? Router.createBlogUrl(item.id)
             : Router.createProjectUrl(item.id);
 
-        const categoryLabel = item.type === 'blog' ? 'Blog' : 'Project';
+        const categoryLabel = item.label || (item.type === 'blog' ? 'Blog' : 'Project');
         const imageSrc = item.image || 'images/placeholder.jpg';
 
         return `
@@ -173,6 +173,7 @@ const ContentLoader = (function() {
                     if (!mdResponse.ok) throw new Error('Markdown file not found');
                     const mdText = await mdResponse.text();
                     contentElement.innerHTML = renderMarkdown(mdText);
+                    addHeadingIds(contentElement);
                 } catch (e) {
                     console.error('Error loading markdown content:', e);
                     contentElement.innerHTML = '<p>Content could not be loaded.</p>';
@@ -227,6 +228,18 @@ const ContentLoader = (function() {
         return DOMPurify.sanitize(rawHtml, {
             ADD_TAGS: ['iframe'],
             ADD_ATTR: ['allowfullscreen', 'frameborder', 'allow', 'src', 'title', 'loading', 'referrerpolicy']
+        });
+    }
+
+    // Give section headings slug ids so in-post links (#section-name) can target them
+    function addHeadingIds(container) {
+        container.querySelectorAll('h2').forEach(heading => {
+            if (heading.id) return;
+            heading.id = heading.textContent
+                .toLowerCase()
+                .replace(/[^a-z0-9\s-]/g, '')
+                .trim()
+                .replace(/[\s-]+/g, '-');
         });
     }
 

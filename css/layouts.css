@@ -621,6 +621,143 @@
     vertical-align: middle;
 }
 
+.callout-verdict {
+    background-color: var(--bg-tertiary);
+    border-left-color: var(--text-tertiary);
+}
+
+.callout-verdict .callout-label {
+    color: var(--text-secondary);
+}
+
+/* In-post table of contents */
+.article-content h2 {
+    scroll-margin-top: calc(var(--header-height) + var(--spacing-sm));
+}
+
+.toc {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin: var(--spacing-lg) 0 var(--spacing-xl);
+}
+
+.toc-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.article-content .toc ol {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.article-content .toc li {
+    margin-bottom: 0.15rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.article-content .toc a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.article-content .toc a:hover {
+    color: var(--accent-primary);
+}
+
+/* Wide architecture diagram that breaks out of the text column */
+.diagram-figure {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1200px, calc(100vw - 2 * var(--spacing-md)));
+    margin: var(--spacing-xl) 0;
+}
+
+.diagram-frame {
+    display: block;
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    cursor: zoom-in;
+}
+
+.article-content .diagram-frame img {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Same trick Excalidraw uses for its own dark mode */
+[data-theme="dark"] .diagram-frame {
+    background-color: #121212;
+}
+
+[data-theme="dark"] .diagram-frame img {
+    filter: invert(0.93) hue-rotate(180deg);
+}
+
+.diagram-figure figcaption {
+    max-width: var(--content-width);
+    margin: var(--spacing-sm) auto 0;
+    padding: 0 var(--spacing-md);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--text-tertiary);
+    text-align: center;
+}
+
+.diagram-actions {
+    display: block;
+    margin-top: 0.3rem;
+    font-weight: 500;
+}
+
+@media (max-width: 640px) {
+    .diagram-frame {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .article-content .diagram-frame img {
+        width: 960px;
+        max-width: none;
+    }
+}
+
+/* Horizontally scrollable wrapper for wide tables */
+.table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: var(--spacing-lg) 0;
+}
+
+.table-scroll table {
+    margin: 0;
+}
+
+.table-prose th,
+.table-prose td {
+    white-space: normal;
+    vertical-align: top;
+}
+
+.table-prose td:last-child {
+    width: auto;
+}
+
 /* Headline stat row */
 .stat-row {
     display: flex;

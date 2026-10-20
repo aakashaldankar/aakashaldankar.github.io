@@ -12,7 +12,8 @@
     "home-then-hired"
   ],
   "projects": [
-     "kaleidoscope-chat-ai-tutor",
+    "zero-ai-incident-agent",
+    "kaleidoscope-chat-ai-tutor",
     "llama-medical-finetune",
     "albany-airbnb-price-predictor"
   ]
